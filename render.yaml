@@ -3,7 +3,7 @@ services:
     name: fastapi-app
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn api:app --host=0.0.0.0 --port=$PORT
     pythonversion: 3.10
     envVars:
       - key: PORT
