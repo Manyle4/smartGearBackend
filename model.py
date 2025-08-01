@@ -49,8 +49,11 @@ model.fit(x)
 
 df["prediction"] = model.predict(x)
 
-df["avg_amount"] = df.groupby("owner")["amount"].transform("mean")
+#Trying to add an average amount column
+# df["avg_amount"] = df.groupby("owner")["amount"].transform("mean")
 
+#Counting the number of anomalies detected in the dummy data
 anomaly_count = (df["prediction"] == -1).sum()
 
+#Bundling the model to use in the api
 joblib.dump(model, 'model.pkl')
