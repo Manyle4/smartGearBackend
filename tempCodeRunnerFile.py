@@ -1,0 +1,1 @@
+df["amount"] >= df["avg_amount"]
